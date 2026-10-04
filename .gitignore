@@ -23,3 +23,5 @@ out.json
 all_ids.txt
 partners.json
 run_build.sh
+*.bundle
+*-source.zip
