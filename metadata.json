@@ -1,0 +1,6 @@
+{
+  "name": "FinTrackPro - Velocity Wealth",
+  "description": "Comprehensive mutual fund and SIP management platform with real-time AMFI NAV tracking, partner portal, and 2FA authentication by Velocity Wealth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

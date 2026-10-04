@@ -1,0 +1,84 @@
+{
+  "entities": {
+    "kycApplication": {
+      "title": "KYC Application",
+      "description": "A client's KYC submission",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "kycStatus": { "type": "string", "enum": ["DRAFT", "SUBMITTED", "UNDER_REVIEW", "CORRECTION_REQUIRED", "REJECTED", "VERIFIED"] },
+        "gender": { "type": "string", "maxLength": 50 },
+        "fatherName": { "type": "string", "maxLength": 100 },
+        "maritalStatus": { "type": "string", "maxLength": 50 },
+        "aadhaarNumber": { "type": "string", "maxLength": 12 },
+        "bankAccountName": { "type": "string", "maxLength": 100 },
+        "bankName": { "type": "string", "maxLength": 100 },
+        "bankAccountNumber": { "type": "string", "maxLength": 50 },
+        "bankIfsc": { "type": "string", "maxLength": 20 },
+        "bankAccountType": { "type": "string", "maxLength": 50 },
+        "occupation": { "type": "string", "maxLength": 100 },
+        "annualIncome": { "type": "string", "maxLength": 100 },
+        "sourceOfIncome": { "type": "string", "maxLength": 100 },
+        "investmentExperience": { "type": "string", "maxLength": 50 },
+        "isFatca": { "type": "boolean" },
+        "isPep": { "type": "boolean" },
+        "nomineeName": { "type": "string", "maxLength": 100 },
+        "nomineeRelation": { "type": "string", "maxLength": 50 },
+        "panDocumentUrl": { "type": "string", "maxLength": 1000000 },
+        "aadhaarDocumentUrl": { "type": "string", "maxLength": 1000000 },
+        "bankProofUrl": { "type": "string", "maxLength": 1000000 },
+        "photoUrl": { "type": "string", "maxLength": 1000000 },
+        "signatureUrl": { "type": "string", "maxLength": 1000000 },
+        "pan": { "type": "string", "maxLength": 10 },
+        "dob": { "type": "string", "maxLength": 20 },
+        "address": { "type": "string", "maxLength": 500 },
+        "rejectionReason": { "type": "string", "maxLength": 500 },
+        "submittedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["uid", "kycStatus"]
+    },
+    "authOtp": {
+      "title": "Auth OTP",
+      "description": "One-time password for authentication and authorization",
+      "type": "object",
+      "properties": {
+        "phone": { "type": "string", "maxLength": 20 },
+        "otp": { "type": "string", "maxLength": 6 },
+        "expiresAt": { "type": "number" },
+        "attempts": { "type": "number" },
+        "reason": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "number" },
+        "verified": { "type": "boolean" }
+      },
+      "required": ["phone", "otp", "expiresAt"]
+    },
+    "verifiedAuthorization": {
+      "title": "Verified Authorization",
+      "description": "Cryptographic authorization token issued upon OTP verification",
+      "type": "object",
+      "properties": {
+        "token": { "type": "string", "maxLength": 128 },
+        "phone": { "type": "string", "maxLength": 20 },
+        "type": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "number" },
+        "expiresAt": { "type": "number" },
+        "used": { "type": "boolean" }
+      },
+      "required": ["token", "phone", "expiresAt"]
+    }
+  },
+  "firestore": {
+    "/kyc_applications/{applicationId}": {
+      "schema": { "$ref": "#/entities/kycApplication" },
+      "description": "KYC Applications"
+    },
+    "/auth_otps/{phone}": {
+      "schema": { "$ref": "#/entities/authOtp" },
+      "description": "Authentication and authorization OTP records"
+    },
+    "/verified_authorizations/{token}": {
+      "schema": { "$ref": "#/entities/verifiedAuthorization" },
+      "description": "Single-use verified authorization tokens"
+    }
+  }
+}

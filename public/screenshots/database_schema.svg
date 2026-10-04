@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="schBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#schBg)"/>
+  
+  <text x="600" y="40" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">FinTrackPro: PostgreSQL &amp; Drizzle Relational Database Schema</text>
+  <text x="600" y="58" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="middle">Google Cloud SQL Managed PostgreSQL 16 • Strict Foreign Key Integrity</text>
+
+  <!-- Table 1: users -->
+  <g transform="translate(50, 90)">
+    <rect x="0" y="0" width="230" height="240" rx="8" fill="#131c2e" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="32" rx="8" fill="#1d4ed8"/>
+    <text x="12" y="21" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">TABLE: users</text>
+    <text x="12" y="52" fill="#38bdf8" font-family="monospace" font-size="10">id: uuid (PK)</text>
+    <text x="12" y="72" fill="#cbd5e1" font-family="monospace" font-size="10">email: varchar(255)</text>
+    <text x="12" y="92" fill="#cbd5e1" font-family="monospace" font-size="10">phone_number: varchar(20)</text>
+    <text x="12" y="112" fill="#cbd5e1" font-family="monospace" font-size="10">full_name: varchar(255)</text>
+    <text x="12" y="132" fill="#cbd5e1" font-family="monospace" font-size="10">role: user_role_enum</text>
+    <text x="12" y="152" fill="#cbd5e1" font-family="monospace" font-size="10">is_active: boolean</text>
+    <text x="12" y="172" fill="#cbd5e1" font-family="monospace" font-size="10">two_factor_secret: text</text>
+    <text x="12" y="192" fill="#cbd5e1" font-family="monospace" font-size="10">created_at: timestamp</text>
+    <text x="12" y="212" fill="#cbd5e1" font-family="monospace" font-size="10">updated_at: timestamp</text>
+  </g>
+
+  <!-- Table 2: partners -->
+  <g transform="translate(320, 90)">
+    <rect x="0" y="0" width="230" height="240" rx="8" fill="#131c2e" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="32" rx="8" fill="#6d28d9"/>
+    <text x="12" y="21" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">TABLE: partners (ARN)</text>
+    <text x="12" y="52" fill="#a78bfa" font-family="monospace" font-size="10">id: uuid (PK)</text>
+    <text x="12" y="72" fill="#cbd5e1" font-family="monospace" font-size="10">user_id: uuid (FK -> users)</text>
+    <text x="12" y="92" fill="#cbd5e1" font-family="monospace" font-size="10">arn_number: varchar(20)</text>
+    <text x="12" y="112" fill="#cbd5e1" font-family="monospace" font-size="10">firm_name: varchar(255)</text>
+    <text x="12" y="132" fill="#cbd5e1" font-family="monospace" font-size="10">euin: varchar(20)</text>
+    <text x="12" y="152" fill="#cbd5e1" font-family="monospace" font-size="10">commission_rate: numeric</text>
+    <text x="12" y="172" fill="#cbd5e1" font-family="monospace" font-size="10">total_aum: numeric(15,2)</text>
+    <text x="12" y="192" fill="#cbd5e1" font-family="monospace" font-size="10">created_at: timestamp</text>
+    <text x="12" y="212" fill="#cbd5e1" font-family="monospace" font-size="10">updated_at: timestamp</text>
+  </g>
+
+  <!-- Table 3: clients -->
+  <g transform="translate(590, 90)">
+    <rect x="0" y="0" width="260" height="240" rx="8" fill="#131c2e" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="32" rx="8" fill="#047857"/>
+    <text x="12" y="21" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">TABLE: clients</text>
+    <text x="12" y="52" fill="#34d399" font-family="monospace" font-size="10">id: uuid (PK)</text>
+    <text x="12" y="72" fill="#cbd5e1" font-family="monospace" font-size="10">user_id: uuid (FK -> users)</text>
+    <text x="12" y="92" fill="#cbd5e1" font-family="monospace" font-size="10">partner_id: uuid (FK -> partners)</text>
+    <text x="12" y="112" fill="#cbd5e1" font-family="monospace" font-size="10">pan: varchar(10)</text>
+    <text x="12" y="132" fill="#cbd5e1" font-family="monospace" font-size="10">kyc_status: kyc_status_enum</text>
+    <text x="12" y="152" fill="#cbd5e1" font-family="monospace" font-size="10">bank_account_number: varchar(50)</text>
+    <text x="12" y="172" fill="#cbd5e1" font-family="monospace" font-size="10">bank_ifsc: varchar(20)</text>
+    <text x="12" y="192" fill="#cbd5e1" font-family="monospace" font-size="10">digital_signature: text</text>
+    <text x="12" y="212" fill="#cbd5e1" font-family="monospace" font-size="10">created_at: timestamp</text>
+  </g>
+
+  <!-- Table 4: instruments (AMFI) -->
+  <g transform="translate(890, 90)">
+    <rect x="0" y="0" width="260" height="240" rx="8" fill="#131c2e" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="32" rx="8" fill="#b45309"/>
+    <text x="12" y="21" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">TABLE: instruments (AMFI)</text>
+    <text x="12" y="52" fill="#fbbf24" font-family="monospace" font-size="10">code: varchar(50) (PK)</text>
+    <text x="12" y="72" fill="#cbd5e1" font-family="monospace" font-size="10">name: varchar(255)</text>
+    <text x="12" y="92" fill="#cbd5e1" font-family="monospace" font-size="10">fund_house: varchar(255)</text>
+    <text x="12" y="112" fill="#cbd5e1" font-family="monospace" font-size="10">category: varchar(100)</text>
+    <text x="12" y="132" fill="#cbd5e1" font-family="monospace" font-size="10">current_price (NAV): numeric</text>
+    <text x="12" y="152" fill="#cbd5e1" font-family="monospace" font-size="10">previous_close: numeric</text>
+    <text x="12" y="172" fill="#cbd5e1" font-family="monospace" font-size="10">historical_data: jsonb</text>
+    <text x="12" y="192" fill="#cbd5e1" font-family="monospace" font-size="10">last_synced_at: timestamp</text>
+    <text x="12" y="212" fill="#cbd5e1" font-family="monospace" font-size="10">updated_at: timestamp</text>
+  </g>
+
+  <!-- Bottom Tables: sips, mandates, transactions -->
+  <g transform="translate(50, 370)">
+    <rect x="0" y="0" width="340" height="260" rx="8" fill="#131c2e" stroke="#1e293b"/>
+    <rect x="0" y="0" width="340" height="30" rx="8" fill="#1e293b"/>
+    <text x="12" y="20" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold">TABLE: sips (Systematic Investment Plans)</text>
+    <text x="12" y="50" fill="#cbd5e1" font-family="monospace" font-size="9">id: uuid (PK)</text>
+    <text x="12" y="68" fill="#cbd5e1" font-family="monospace" font-size="9">client_id: uuid (FK -> clients)</text>
+    <text x="12" y="86" fill="#cbd5e1" font-family="monospace" font-size="9">instrument_code: varchar(50) (FK -> instruments)</text>
+    <text x="12" y="104" fill="#cbd5e1" font-family="monospace" font-size="9">amount: numeric(12,2)</text>
+    <text x="12" y="122" fill="#cbd5e1" font-family="monospace" font-size="9">frequency: sip_freq_enum (MONTHLY)</text>
+    <text x="12" y="140" fill="#cbd5e1" font-family="monospace" font-size="9">sip_day: integer (1..28)</text>
+    <text x="12" y="158" fill="#cbd5e1" font-family="monospace" font-size="9">status: sip_status_enum (ACTIVE)</text>
+    <text x="12" y="176" fill="#cbd5e1" font-family="monospace" font-size="9">next_execution_date: date</text>
+  </g>
+
+  <g transform="translate(430, 370)">
+    <rect x="0" y="0" width="340" height="260" rx="8" fill="#131c2e" stroke="#1e293b"/>
+    <rect x="0" y="0" width="340" height="30" rx="8" fill="#1e293b"/>
+    <text x="12" y="20" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">TABLE: mandates (NPCI NACH)</text>
+    <text x="12" y="50" fill="#cbd5e1" font-family="monospace" font-size="9">id: uuid (PK)</text>
+    <text x="12" y="68" fill="#cbd5e1" font-family="monospace" font-size="9">client_id: uuid (FK -> clients)</text>
+    <text x="12" y="86" fill="#cbd5e1" font-family="monospace" font-size="9">umrn: varchar(50) (NPCI Unique Number)</text>
+    <text x="12" y="104" fill="#cbd5e1" font-family="monospace" font-size="9">max_amount: numeric(12,2)</text>
+    <text x="12" y="122" fill="#cbd5e1" font-family="monospace" font-size="9">bank_name: varchar(100)</text>
+    <text x="12" y="140" fill="#cbd5e1" font-family="monospace" font-size="9">status: mandate_status_enum (ACTIVE)</text>
+    <text x="12" y="158" fill="#cbd5e1" font-family="monospace" font-size="9">auth_mode: nach_auth_enum (NET_BANKING / OTP)</text>
+  </g>
+
+  <g transform="translate(810, 370)">
+    <rect x="0" y="0" width="340" height="260" rx="8" fill="#131c2e" stroke="#1e293b"/>
+    <rect x="0" y="0" width="340" height="30" rx="8" fill="#1e293b"/>
+    <text x="12" y="20" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="bold">TABLE: transactions (Immutable Ledger)</text>
+    <text x="12" y="50" fill="#cbd5e1" font-family="monospace" font-size="9">id: uuid (PK)</text>
+    <text x="12" y="68" fill="#cbd5e1" font-family="monospace" font-size="9">client_id: uuid (FK -> clients)</text>
+    <text x="12" y="86" fill="#cbd5e1" font-family="monospace" font-size="9">instrument_code: varchar(50)</text>
+    <text x="12" y="104" fill="#cbd5e1" font-family="monospace" font-size="9">type: txn_type_enum (BUY / SELL / SIP_DEBIT)</text>
+    <text x="12" y="122" fill="#cbd5e1" font-family="monospace" font-size="9">units: numeric(15,4)</text>
+    <text x="12" y="140" fill="#cbd5e1" font-family="monospace" font-size="9">purchase_price (NAV): numeric(12,4)</text>
+    <text x="12" y="158" fill="#cbd5e1" font-family="monospace" font-size="9">total_amount: numeric(15,2)</text>
+    <text x="12" y="176" fill="#cbd5e1" font-family="monospace" font-size="9">status: txn_status_enum (COMPLETED)</text>
+  </g>
+</svg>

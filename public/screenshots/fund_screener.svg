@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <rect width="1200" height="675" fill="#090d16"/>
+  <rect x="0" y="0" width="1200" height="65" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+  <text x="50" y="38" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">Mutual Fund Screener &amp; Live AMFI NAV Directory</text>
+  <rect x="750" y="16" width="300" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+  <text x="770" y="38" fill="#94a3b8" font-family="sans-serif" font-size="12">🔍 Search by scheme, AMC or code...</text>
+
+  <!-- Filter Chips -->
+  <g transform="translate(50, 85)">
+    <rect x="0" y="0" width="90" height="32" rx="16" fill="#10b981"/>
+    <text x="45" y="21" fill="#022c22" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">All Funds</text>
+
+    <rect x="105" y="0" width="110" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+    <text x="160" y="21" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Large Cap (84)</text>
+
+    <rect x="230" y="0" width="110" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+    <text x="285" y="21" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Flexi Cap (72)</text>
+
+    <rect x="355" y="0" width="110" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+    <text x="410" y="21" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Mid Cap (65)</text>
+
+    <rect x="480" y="0" width="110" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+    <text x="535" y="21" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">Small Cap (48)</text>
+
+    <rect x="605" y="0" width="120" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+    <text x="665" y="21" fill="#cbd5e1" font-family="sans-serif" font-size="12" text-anchor="middle">ELSS Tax Saver</text>
+  </g>
+
+  <!-- Table Box -->
+  <rect x="50" y="140" width="1100" height="500" rx="12" fill="#131c2e" stroke="#1e293b"/>
+  <rect x="65" y="155" width="1070" height="30" fill="#1e293b" rx="4"/>
+  <text x="80" y="175" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">AMFI CODE</text>
+  <text x="180" y="175" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">SCHEME NAME</text>
+  <text x="550" y="175" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">CATEGORY</text>
+  <text x="700" y="175" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">LATEST NAV</text>
+  <text x="820" y="175" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">3Y RETURN (CAGR)</text>
+  <text x="960" y="175" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">ACTION</text>
+
+  <!-- Row 1 -->
+  <text x="80" y="215" fill="#64748b" font-family="monospace" font-size="11">120823</text>
+  <text x="180" y="215" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Motilal Oswal Midcap Fund - Direct Plan - Growth</text>
+  <text x="550" y="215" fill="#cbd5e1" font-family="sans-serif" font-size="11">Equity - Mid Cap</text>
+  <text x="700" y="215" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">₹ 98.45</text>
+  <text x="820" y="215" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold">+ 32.40%</text>
+  <rect x="960" y="198" width="90" height="26" rx="4" fill="#10b981"/>
+  <text x="1005" y="215" fill="#022c22" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Invest SIP</text>
+
+  <!-- Row 2 -->
+  <text x="80" y="260" fill="#64748b" font-family="monospace" font-size="11">118556</text>
+  <text x="180" y="260" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Tata Digital India Fund - Direct Plan - Growth</text>
+  <text x="550" y="260" fill="#cbd5e1" font-family="sans-serif" font-size="11">Sectoral - Technology</text>
+  <text x="700" y="260" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">₹ 48.12</text>
+  <text x="820" y="260" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold">+ 24.18%</text>
+  <rect x="960" y="243" width="90" height="26" rx="4" fill="#10b981"/>
+  <text x="1005" y="260" fill="#022c22" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Invest SIP</text>
+
+  <!-- Row 3 -->
+  <text x="80" y="305" fill="#64748b" font-family="monospace" font-size="11">122639</text>
+  <text x="180" y="305" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Parag Parikh Flexi Cap Fund - Direct - Growth</text>
+  <text x="550" y="305" fill="#cbd5e1" font-family="sans-serif" font-size="11">Equity - Flexi Cap</text>
+  <text x="700" y="305" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">₹ 84.92</text>
+  <text x="820" y="305" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold">+ 21.85%</text>
+  <rect x="960" y="288" width="90" height="26" rx="4" fill="#10b981"/>
+  <text x="1005" y="305" fill="#022c22" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Invest SIP</text>
+</svg>

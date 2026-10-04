@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="kycBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#kycBg)"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="65" fill="#0b1120" stroke="#1e293b" stroke-width="1"/>
+  <text x="50" y="38" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">Client KYC Verification &amp; SEBI e-Sign Desk</text>
+  <rect x="980" y="16" width="170" height="34" rx="6" fill="#10b981"/>
+  <text x="1065" y="38" fill="#022c22" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Export KYC Form (PDF)</text>
+
+  <!-- Left Column: Verification Form -->
+  <rect x="50" y="90" width="530" height="550" rx="12" fill="#131c2e" stroke="#1e293b"/>
+  <text x="75" y="125" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold">1. Identity &amp; Statutory Details</text>
+  
+  <g transform="translate(75, 145)">
+    <text x="0" y="18" fill="#94a3b8" font-family="sans-serif" font-size="11">Full Legal Name (as per PAN)</text>
+    <rect x="0" y="26" width="480" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="14" y="48" fill="#ffffff" font-family="sans-serif" font-size="12">Parthasarathy Radhakrishnan</text>
+
+    <text x="0" y="80" fill="#94a3b8" font-family="sans-serif" font-size="11">PAN Card Number</text>
+    <rect x="0" y="88" width="230" height="34" rx="6" fill="#1e293b" stroke="#10b981"/>
+    <text x="14" y="110" fill="#ffffff" font-family="sans-serif" font-size="12">AHWPR4582K</text>
+    <text x="180" y="110" fill="#10b981" font-family="sans-serif" font-size="10">✓ VALID</text>
+
+    <text x="250" y="80" fill="#94a3b8" font-family="sans-serif" font-size="11">Aadhaar Last 4 Digits</text>
+    <rect x="250" y="88" width="230" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="264" y="110" fill="#ffffff" font-family="sans-serif" font-size="12">•••• •••• 8491</text>
+
+    <text x="0" y="145" fill="#94a3b8" font-family="sans-serif" font-size="11">Bank Account &amp; IFSC Code</text>
+    <rect x="0" y="153" width="230" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="14" y="175" fill="#ffffff" font-family="sans-serif" font-size="12">50100238491290 (HDFC)</text>
+    <rect x="250" y="153" width="230" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="264" y="175" fill="#ffffff" font-family="sans-serif" font-size="12">HDFC0000128</text>
+
+    <text x="0" y="210" fill="#94a3b8" font-family="sans-serif" font-size="11">Residential Address</text>
+    <rect x="0" y="218" width="480" height="50" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="14" y="240" fill="#ffffff" font-family="sans-serif" font-size="11">Flat 402, Sea Green Apartments, Sion West, Mumbai</text>
+    <text x="14" y="256" fill="#94a3b8" font-family="sans-serif" font-size="10">Maharashtra – 400 022</text>
+  </g>
+
+  <!-- Right Column: Document Vault & Signature Canvas -->
+  <rect x="610" y="90" width="540" height="550" rx="12" fill="#131c2e" stroke="#1e293b"/>
+  <text x="635" y="125" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold">2. Digital Signature &amp; Document Upload</text>
+
+  <!-- Signature Canvas -->
+  <g transform="translate(635, 145)">
+    <text x="0" y="18" fill="#94a3b8" font-family="sans-serif" font-size="11">Digital Signature Pad (Draw with touch / mouse)</text>
+    <rect x="0" y="26" width="490" height="150" rx="8" fill="#090d16" stroke="#334155" stroke-dasharray="4 4"/>
+    <!-- Drawn Signature path -->
+    <path d="M 50 120 C 70 80, 90 60, 110 95 C 130 130, 145 90, 180 85 C 210 80, 240 120, 290 90 Q 330 60, 380 110" fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+    <text x="475" y="165" fill="#10b981" font-family="sans-serif" font-size="10" text-anchor="end">✓ Capturing at 60 FPS</text>
+  </g>
+
+  <!-- Document status list -->
+  <g transform="translate(635, 345)">
+    <text x="0" y="18" fill="#94a3b8" font-family="sans-serif" font-size="11">Uploaded Document Audit Trail</text>
+    
+    <rect x="0" y="26" width="490" height="38" rx="6" fill="#1e293b"/>
+    <text x="14" y="49" fill="#ffffff" font-family="sans-serif" font-size="11">📄 PAN_Card_Front_AHWPR4582K.pdf</text>
+    <text x="410" y="49" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="bold">VERIFIED</text>
+
+    <rect x="0" y="72" width="490" height="38" rx="6" fill="#1e293b"/>
+    <text x="14" y="95" fill="#ffffff" font-family="sans-serif" font-size="11">📄 Aadhaar_Masked_E-KYC_UIDAI.pdf</text>
+    <text x="410" y="95" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="bold">VERIFIED</text>
+
+    <rect x="0" y="118" width="490" height="38" rx="6" fill="#1e293b"/>
+    <text x="14" y="141" fill="#ffffff" font-family="sans-serif" font-size="11">📄 Cancelled_Cheque_HDFC_Account.jpg</text>
+    <text x="410" y="141" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="bold">VERIFIED</text>
+  </g>
+
+  <!-- Submit Button -->
+  <rect x="635" y="550" width="490" height="42" rx="8" fill="#10b981"/>
+  <text x="880" y="576" fill="#022c22" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Lock &amp; Submit KYC to AMFI Portal</text>
+</svg>
